@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Habiba Essalemi RABIH</title>
+<style>
+:root{
+  --bg:#f0f4ff;
+  --text:#1e293b;
+  --muted:#64748b;
+  --accent:#7c3aed;
+  --accent-grad:linear-gradient(135deg,#7c3aed,#3b82f6);
+  --card:rgba(255,255,255,0.9);
+  --radius:18px;
+  --shadow:0 8px 24px rgba(0,0,0,0.10);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+*{box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);line-height:1.6;margin:0;padding:0;}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;padding:24px 0;}
+.brand h1{font-size:24px;margin:0;background:var(--accent-grad);-webkit-background-clip:text;color:transparent;}
+.brand p{font-size:14px;color:var(--muted);margin:4px 0 0;}
+nav{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+.btn{padding:10px 14px;border-radius:12px;background:#e2e8f0;font-size:14px;cursor:pointer;text-decoration:none;color:var(--text);display:inline-block;}
+.btn.primary{background:var(--accent);color:#fff;font-weight:600;border-radius:12px;padding:10px 18px;}
+.hero{background:var(--accent-grad);color:#fff;border-radius:20px;padding:36px;text-align:center;margin-bottom:28px;}
+.hero h2{font-size:28px;margin:0;}
+.hero p{font-size:16px;max-width:800px;margin:12px auto 0;}
+.slogan{font-size:20px;font-weight:700;margin-top:18px;color:#fff;text-shadow:0 0 8px rgba(0,0,0,0.12);}
+
+/* Cards & sections */
+.card{background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);margin-bottom:20px;}
+.section h3{margin-bottom:12px;font-size:20px;color:var(--text);}
+.floating-icons{display:flex;gap:18px;justify-content:flex-start;margin-top:14px;flex-wrap:wrap;}
+.floating-icons img{width:56px;height:56px;animation:float 6s ease-in-out infinite;}
+@keyframes float{0%{transform:translateY(0);}50%{transform:translateY(-10px);}100%{transform:translateY(0);}}
+.project{padding:14px;border-radius:12px;background:#f8faff;margin-bottom:12px;}
+
+/* Galerie */
+#galerie{padding:20px 0;}
+.galerie-container{display:flex;flex-direction:column;gap:18px;align-items:flex-start;}
+.galerie-container img{width:250px;border-radius:8px;box-shadow:0 4px 8px rgba(0,0,0,0.08);transition:transform .25s,box-shadow .25s;opacity:0;transform:translateY(12px);animation:fadeInUp .9s ease forwards;}
+.galerie-container img:hover{transform:scale(1.04);box-shadow:0 0 18px rgba(255,215,0,0.35);}
+@keyframes fadeInUp{to{opacity:1;transform:translateY(0);}}
+
+/* Responsive */
+@media (max-width:760px){
+  header{padding:18px;}
+  .hero h2{font-size:22px;}
+  .galerie-container img{width:180px;}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <h1>Habiba Essalemi RABIH</h1>
+      <p>Futur Product Builder — Low Code / NoCode & IA</p>
+    </div>
+    <nav>
+      <a class="btn" href="#about">À propos</a>
+      <a class="btn" href="#competences">Compétences</a>
+      <a class="btn" href="#projets">Projets</a>
+      <a class="btn" href="#galerie">Galerie</a>
+      <a class="btn" href="#videos">Vidéos</a>
+      <a class="btn" href="#cv">CV</a>
+      <a class="btn primary" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h2>Futur Product Builder — Low Code/NoCode et expert en IA</h2>
+    <p>J'aide les entreprises à transformer leurs processus complexes en solutions automatisées efficaces grâce à l’Intelligence Artificielle et aux outils NoCode.</p>
+    <h3 class="slogan">« Transformez vos idées en actions. Automatisons votre réussite. »</h3>
+  </div>
+
+  <!-- À propos -->
+  <div class="card section" id="about">
+    <h3>À propos</h3>
+    <p>Issue d’un parcours en comptabilité, gestion et marketing, j’ai toujours gardé un attrait pour l’informatique.</p>
+    <p>C’est lors d’une réponse à un marché public que j’ai été confrontée à la lourdeur et la lenteur des procédures. En cherchant à automatiser ces tâches, j’ai découvert la puissance du NoCode et de l’intelligence artificielle ainsi que ma passion pour l’automatisation des tâches chronophages.</p>
+    <p>Ce déclic a révélé ma véritable passion : <strong>optimiser, automatiser et créer des solutions intelligentes</strong>.</p>
+  </div>
+
+  <div class="card section" id="musique">
+    <h3>Ambiance sonore</h3>
+    <p>🎵 Activez une ambiance minimaliste pour accompagner votre visite :</p>
+    <audio controls loop>
+      <source src="musique/soft-piano.mp3" type="audio/mpeg">
+      Votre navigateur ne supporte pas la lecture audio.
+    </audio>
+  </div>
+
+
+  <!-- Compétences -->
+  <div class="card section" id="competences">
+    <h3>Compétences</h3>
+    <p>J'ai créé une plateforme d'automatisation, d'analyse et de génération en 5 minutes des mémoires techniques des marchés publics pour différents secteurs d'activité.</p>
+    <p>Je commence à maîtriser les outils d’automatisation et de NoCode pour transformer les processus métiers.</p>
+    <p><strong>Exemple concret :</strong> Avec Airtable, j’ai créé une base de données pour suivre les marchés publics de la Région Île-de-France ainsi que la création d'un outil d'analyse et de génération intelligente du mémoire technique. J'envisage de proposer ces services aux TPE/PME.</p>
+
+    <div class="floating-icons" aria-hidden="true">
+      <img src="icons/airtable.png" alt="Airtable">
+      <img src="icons/zapier.png" alt="Zapier">
+      <img src="icons/make.png" alt="Make">
+    </div>
+  </div>
+
+  <!-- Projets -->
+  <div class="card section" id="projets">
+    <h3>Projets</h3>
+    <div class="project">
+      <strong>Analyse des avis de marchés publics</strong>
+      <p><strong>Problème :</strong> Identifier rapidement les éléments clés d’un marché avant de répondre.</p>
+      <p><strong>Solution :</strong> Analyse automatique des documents PDF des avis et annonces.</p>
+      <p><strong>Résultat :</strong> Décision facilitée pour savoir si l’entreprise doit postuler ou non.</p>
+    </div>
+    <div class="project">
+      <strong>Génération automatique de mémoire technique</strong>
+      <p><strong>Problème :</strong> Les dossiers d’entreprises sont très denses et leur analyse manuelle prend plusieurs heures.</p>
+      <p><strong>Solution :</strong> Extraction automatique de tous les documents pour analyse.</p>
+      <p><strong>Résultat :</strong> Mémoire technique généré en 5 minutes au lieu de plusieurs heures.</p>
+    </div>
+    <div class="project">
+      <strong>Automatisation de la facturation clients</strong>
+      <p><strong>Problème :</strong> La facturation manuelle prend du temps et entraîne des erreurs.</p>
+      <p><strong>Solution :</strong> Automatisation du processus de facturation.</p>
+      <p><strong>Résultat :</strong> Facturation rapide, avec moins d’erreurs et suppression des doublons.</p>
+    </div>
+  </div>
+
+  <!-- Galerie -->
+  <section id="galerie" class="card">
+    <h3>Galerie</h3>
+    <div class="galerie-container">
+      <a href="images/automatisation_facturation_airtable.png" data-lightbox="galerie" data-title="automatisation_facturation_airtable.png">
+        <img src="images/automatisation_facturation_airtable.png" alt="automatisation_facturation_airtable">
+      </a>
+
+      <a href="images/automatisation_facturation_zapier.png" data-lightbox="galerie" data-title="automatisation_facturation_zapier.png">
+        <img src="images/automatisation_facturation_zapier.png" alt="automatisation_facturation_zapier">
+      </a>
+
+      <a href="images/tableau_de_bord_airtable.png" data-lightbox="galerie" data-title="tableau_de_bord_airtable">
+        <img src="images/tableau_de_bord_airtable.png" alt="tableau_de_bord_airtable">
+      </a>
+
+      <a href="images/process_extractionpdf.png" data-lightbox="galerie" data-title="process_extractionpdf">
+        <img src="images/process_extractionpdf.png" alt="process_extractionpdf">
+      </a>
+
+      <a href="images/workflow_automatisation_facturation.png" data-lightbox="galerie" data-title="workflow_automatisation_facturation">
+        <img src="images/workflow_automatisation_facturation.png" alt="workflow_automatisation_facturation">
+      </a>
+    </div>
+  </section>
+
+<!-- Lightbox2 CSS & JS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+  <!-- Vidéos -->
+  <div class="card section" id="videos">
+    <h3>Mes vidéos</h3>
+
+    <h4>Vidéo 1 : Analyse de DCE_ cas1</h4>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/jpCa1usr_08" title="Vidéo 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <h4>Vidéo 2 : Analyse de DCE_ cas2</h4>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/youzLkB3HCs" title="Vidéo 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <h4>Vidéo 3 : Génération automatique du mémoire technique</h4>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/jtMVrJ8k2AY" title="Vidéo 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <!-- CV -->
+  <div class="card section" id="cv">
+    <h3>Mon CV</h3>
+    <p>📄 Vous pouvez télécharger mon CV en cliquant ci‑dessous :</p>
+    <a href="documents/cv-habiba.pdf" target="_blank" class="btn primary">Télécharger mon CV</a>
+  </div>
+
+  <!-- Contact (simple ancre, on peut améliorer plus tard) -->
+  <div class="card section" id="contact">
+    <h3>Contact</h3>
+    <p>Pour me contacter : <strong>habiba@example.com</strong> (remplace par ton e‑mail réel)</p>
+  </div>
+
+  <footer style="text-align:center;margin:28px 0;color:var(--muted);font-size:14px;">
+    © {year} Habiba Essalemi — Portfolio
+  </footer>
+</div>
+
+<script>
+// Remplir l'année dans le footer
+document.addEventListener('DOMContentLoaded', function(){ 
+  var footer = document.querySelector('footer');
+  if(footer) footer.innerHTML = footer.innerHTML.replace('{year}', new Date().getFullYear());
+});
+</script>
+
+</body>
+</html>
